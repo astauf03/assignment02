@@ -161,6 +161,16 @@ There are several datasets that are prescribed for you to use in this part. Belo
 
 1.  Which **eight** bus stop have the largest population within 800 meters? As a rough estimation, consider any block group that intersects the buffer as being part of the 800 meter buffer.
 
+"stop_id"	"stop_name"	"estimated_pop_800m"
+"22272"	"Lombard St & 18th St"	57936
+"25080"	"Rittenhouse Sq & 18th St "	57571
+"24284"	"Snyder Av & 9th St "	57412
+"22273"	"Lombard St & 19th St"	57019
+"14958"	"19th St & Lombard St "	57019
+"3042"	"16th St & Locust St "	56309
+"25083"	"Locust St & 16th St "	56309
+"22241"	"South St & 19th St"	55789
+
 2.  Which **eight** bus stops have the smallest population above 500 people _inside of Philadelphia_ within 800 meters of the stop (Philadelphia county block groups have a geoid prefix of `42101` -- that's `42` for the state of PA, and `101` for Philadelphia county)?
 
     **The queries to #1 & #2 should generate results with a single row, with the following structure:**
@@ -172,6 +182,17 @@ There are several datasets that are prescribed for you to use in this part. Belo
         estimated_pop_800m integer -- The population within 800 meters
     )
     ```
+
+| stop_id | stop_name | estimated_pop_800m |
+|---------|-----------|-------------------|
+| 31500 | Delaware Av & Venango St | 593 |
+| 30840 | Delaware Av & Tioga St | 593 |
+| 31499 | Delaware Av & Castor Av | 593 |
+| 31788 | Northwestern Av & Stenton Av | 655 |
+| 31752 | Stenton Av & Northwestern Av | 655 |
+| 27000 | Bethlehem Pk & Chesney Ln | 655 |
+| 27152 | Bethlehem Pk & Chesney Ln | 655 |
+| 30839 | Delaware Av & Wheatsheaf Ln | 684 |
 
 3.  Using the Philadelphia Water Department Stormwater Billing Parcels dataset, pair each parcel with its closest bus stop. The final result should give the parcel address, bus stop name, and distance apart in meters, rounded to two decimals. Order by distance (largest on top).
 

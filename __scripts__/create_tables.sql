@@ -76,3 +76,26 @@ create table census.population_2020 (
 
 
 create extension if not exists postgis;
+
+
+/*
+COPY septa.bus_stops (stop_id, stop_name, stop_lat, stop_lon, location_type, parent_station, zone_id, wheelchair_boarding)
+FROM '/mnt/c/Users/astau/OneDrive/Desktop/cloud-comp/google_bus/stops.txt'
+WITH (FORMAT CSV, HEADER TRUE);
+
+COPY septa.bus_routes (route_id, route_short_name, route_long_name, route_type, route_color, route_text_color, route_url)
+FROM '/mnt/c/Users/astau/OneDrive/Desktop/cloud-comp/google_bus/routes.txt'
+WITH (FORMAT CSV, HEADER TRUE);
+
+COPY septa.bus_shapes (shape_id, shape_pt_lat, shape_pt_lon, shape_pt_sequence)
+FROM '/mnt/c/Users/astau/OneDrive/Desktop/cloud-comp/google_bus/shapes.txt'
+WITH (FORMAT CSV, HEADER TRUE);
+
+COPY septa.bus_trips (route_id, service_id, trip_id, trip_headsign, block_id, direction_id, shape_id)
+FROM '/mnt/c/Users/astau/OneDrive/Desktop/cloud-comp/google_bus/trips.txt'
+WITH (FORMAT CSV, HEADER TRUE);
+
+COPY septa.rail_stops (stop_id, stop_name, stop_desc, stop_lat, stop_lon, zone_id, stop_url)
+FROM '/mnt/c/Users/astau/OneDrive/Desktop/cloud-comp/stops.txt'
+WITH (FORMAT CSV, HEADER TRUE);
+*/

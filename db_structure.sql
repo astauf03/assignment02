@@ -1,3 +1,4 @@
+-- Active: 1769627356538@@172.31.112.109@5432
 /*
 
 This file contains the SQL commands to prepare the database for your queries.
@@ -31,8 +32,10 @@ running the following command from the command line:
 */
 
 -- Add a column to the septa.bus_stops table to store the geometry of each stop.
+
+CREATE EXTENSION IF NOT EXISTS postgis;
 alter table septa.bus_stops
-add column if not exists geog geography;
+add column if not exists geog geography(Point, 4326);
 
 update septa.bus_stops
 set geog = st_makepoint(stop_lon, stop_lat)::geography;
